@@ -1,0 +1,64 @@
+{
+  "config": {
+    "amplitude_mm": 4.0,
+    "period_s": 4.0,
+    "duration_s": 8.0,
+    "mass_kg": 1.0,
+    "field_half_width_mm": 7.0,
+    "penumbra_sigma_mm": 1.5,
+    "dose_rate_gy_s": 0.4,
+    "depth_cm": 5.0,
+    "attenuation_per_cm": 0.05,
+    "sample_dt_s": 0.5,
+    "noise_sd_mm": 0.15,
+    "seed": 2026
+  },
+  "methods": [
+    {
+      "method": "linear",
+      "position_rmse_mm": 0.20195454668879279,
+      "interior_position_rmse_mm": 0.19170298377589937,
+      "clean_position_rmse_mm": 0.15708830786450687,
+      "max_position_error_mm": 0.4353623048216897,
+      "dose_rmse_gy": 0.025857708573486644,
+      "max_dose_error_gy": 0.046170001913534264,
+      "survival_rmse": 0.006367986029033049
+    },
+    {
+      "method": "local newton",
+      "position_rmse_mm": 0.09576683538821489,
+      "interior_position_rmse_mm": 0.0967420169942205,
+      "clean_position_rmse_mm": 0.017207588078019597,
+      "max_position_error_mm": 0.2844489524398599,
+      "dose_rmse_gy": 0.006266093799005913,
+      "max_dose_error_gy": 0.013980613236913353,
+      "survival_rmse": 0.0015432797068799906
+    },
+    {
+      "method": "cubic",
+      "position_rmse_mm": 0.10416765177175942,
+      "interior_position_rmse_mm": 0.09722396976879255,
+      "clean_position_rmse_mm": 0.03342550215885771,
+      "max_position_error_mm": 0.2854208577100774,
+      "dose_rmse_gy": 0.006798618761134862,
+      "max_dose_error_gy": 0.012877798224835701,
+      "survival_rmse": 0.0016740063135143857
+    }
+  ],
+  "quadrature_max_estimate_gy": 1.9705196745657312e-11,
+  "signed_budget_closure_gy": 0.0,
+  "arnoldi": {
+    "matrix_size": 120,
+    "condition_number_2": 7.744257895668099,
+    "final_gmres_relative_residual": 8.241759461020972e-13,
+    "final_gmres_relative_error": 2.569479007436024e-13,
+    "one_step_time_relative_error": 0.08842222015303511,
+    "mass_error": 1.5543122344752192e-15
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  }
+}
